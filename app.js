@@ -10,6 +10,11 @@ var dishRouter=require('./routes/dishRouter');
 var promoRouter=require('./routes/promoRouter');
 var leaderRouter=require('./routes/leaderRouter');
 
+const mongoose=require('mongoose');
+const Dishes=require('./models/dishes');
+
+mongoose.connect("mongodb://localhost:27017/conFusion", { useNewUrlParser: true });
+
 var app = express();
 
 // view engine setup
